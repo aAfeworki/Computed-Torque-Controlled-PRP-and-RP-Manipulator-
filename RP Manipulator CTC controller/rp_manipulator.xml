@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="" on="09/27/25||05:31:55" using="Simscape Multibody Link Version 7.0" from="SolidWorks 29.0.0"/>
+<ModelUnits mass="kilogram" length="millimeter"/>
+<DataUnits mass="kilogram" length="meter"/>
+<RootAssembly name="rp_manipulator_final" uid="rp_manipulator_final" version="111">
+<AssemblyFile name="rp_manipulator_final.SLDASM" type="SolidWorks Assembly"/>
+<InstanceTree>
+<Instance name="revolute_link-1" uid="revolute_link-1" entityUid="revolute_link*:*Default">
+<Transform>
+<Rotation>0.89341281620237001 1.3803882984042605e-15 -0.44923661899421191 0.44923661899421191 6.6962402507415893e-16 0.89341281620237001 1.5340762301517573e-15 -1 0</Rotation>
+<Translation>-0.0039490474266996711 0.10517151784797467 0.24959391268511014</Translation>
+</Transform>
+</Instance>
+<Instance name="prismatic_link3-1" uid="prismatic_link3-1" entityUid="prismatic_link3*:*Default">
+<Transform>
+<Rotation>0.42962037692272864 -0.78333440616854166 -0.44923661899421219 0.21602690500923835 -0.39388566381309215 0.89341281620236968 -0.87678886172493198 -0.48087554726259263 -4.2876790888409279e-16</Rotation>
+<Translation>-0.20597372240734904 0.50694516270562129 0.24959391268511014</Translation>
+</Transform>
+</Instance>
+<Instance name="base-1" uid="base-1" grounded="true" entityUid="base*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.00952805114312677 0.078369133361903293 0.18959391268511011</Translation>
+</Transform>
+</Instance>
+</InstanceTree>
+<Constraints>
+<Concentric name="Concentric1">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>base-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>revolute_link-1</Uid>
+</InstancePath>
+<Position>0 0 -0.029999999999999999</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident1">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>base-1</Uid>
+</InstancePath>
+<Position>0 0 -0.10000000000000001</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>revolute_link-1</Uid>
+</InstancePath>
+<Position>0 0.16000000000000003 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric2">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>revolute_link-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 1.0000000000000002</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>prismatic_link3-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>2.3716104869651849e-16 1.5067285160201769e-16 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+</Constraints>
+</RootAssembly>
+<Assemblies>
+</Assemblies>
+<Parts>
+<Part name="base" uid="base*:*Default" version="105">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="base.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>1.5707963267948966</Mass>
+<CenterOfMass>0 0 -0.05000000000000001</CenterOfMass>
+<Inertia>0.0037633661996127744 0.0037633661996127736 0.0049087385212340517 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="base_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.94117647058823528" g="0.67450980392156867" b="0.11764705882352941" a="1"/>
+<Diffuse r="0.79999999999999993" g="0.57333333333333336" b="0.099999999999999992" a="1"/>
+<Specular r="0.54588235294117637" g="0.39121568627450981" b="0.068235294117647047" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.02</Shininess>
+</VisualProperties>
+</Part>
+<Part name="prismatic_link3" uid="prismatic_link3*:*Default" version="104">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="prismatic_link3.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>1.1780972450961724</Mass>
+<CenterOfMass>0 0 -0.29999999999999999</CenterOfMass>
+<Inertia>0.03552699504743146 0.03552699504743146 0.00036815538909255402 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="prismatic_link3_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.94117647058823528" g="0.67450980392156867" b="0.11764705882352941" a="1"/>
+<Diffuse r="0.79999999999999993" g="0.57333333333333336" b="0.099999999999999992" a="1"/>
+<Specular r="0.54588235294117637" g="0.39121568627450981" b="0.068235294117647047" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.02</Shininess>
+</VisualProperties>
+</Part>
+<Part name="revolute_link" uid="revolute_link*:*Default" version="107">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="revolute_link.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>1.320513898168618</Mass>
+<CenterOfMass>-1.5305032938997184e-09 0.016472276716456017 -0.055479823371980153</CenterOfMass>
+<Inertia>0.0049036852319143884 0.002745034074037271 0.0045909259631582407 -0.00055423361712134557 -4.0977047755289691e-11 3.9825925322595792e-11</Inertia>
+</MassProperties>
+<GeometryFile name="revolute_link_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.94117647058823528" g="0.67450980392156867" b="0.11764705882352941" a="1"/>
+<Diffuse r="0.79999999999999993" g="0.57333333333333336" b="0.099999999999999992" a="1"/>
+<Specular r="0.54588235294117637" g="0.39121568627450981" b="0.068235294117647047" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.02</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimscapeMultibodyImportXML>
